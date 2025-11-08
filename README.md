@@ -157,3 +157,20 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Run Dev with Console Ninja (VS Code)
+
+If you want the workspace to be opened in VS Code automatically when the Console Ninja extension is installed, set the `CONSOLE_NINJA_EXTENSION_ID` env variable with the extension identifier and run the dedicated script:
+
+```bash
+# on Linux/macOS (bash/zsh)
+export CONSOLE_NINJA_EXTENSION_ID=publisher.extension-id
+pnpm run start:dev:with-console-ninja
+```
+
+What the script does:
+- Checks whether the `code` CLI is available.
+- If `CONSOLE_NINJA_EXTENSION_ID` is set and the extension is installed, it opens VS Code in the current workspace so the extension is activated.
+- Starts the Nest dev server in watch mode.
+
+Note: `start:dev:with-console-ninja` does not install or manage the extension; it only helps open VS Code when the extension is present. Replace `publisher.extension-id` with the real extension id for Console Ninja in your VS Code (you can get it with `code --list-extensions`).
