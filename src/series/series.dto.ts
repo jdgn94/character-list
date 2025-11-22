@@ -1,4 +1,4 @@
-import { SerieImageDto } from 'src/serie_images/serie_images.dto';
+// import { SerieImageDto } from 'src/serie_images/serie_images.dto';
 import { IsString, IsOptional, MinLength } from 'class-validator';
 
 export class CreateSerieDto {
@@ -29,5 +29,5 @@ export class SerieDto {
   imageId: number | null;
   createdAt: Date;
   updatedAt: Date;
-  image: SerieImageDto | null;
+  // image: SerieImageDto | null;
 }
